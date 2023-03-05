@@ -10,22 +10,24 @@
     <title>World Clock</title>
   </head>
   <body>
-    <div class="container">
+    <div id="container">
       <h1> 🌎 World Clock 🕰️</h1>
-      <select>
-        <option value="">Select a city...🔎</option>
-        <option value="">Chicago</option>
-        <option value="">Bangkok</option>
-        <option value="">Dawson</option>
-        <option value="">Moncton</option>
-        <option value="">Colombo</option>
-        <option value="">Oslo</option>
-        <option value="">Dakar</option>
-        <option value="">Juba</option>
+      <select id="city">
+       <option value="">Select a city...🔎</option>
+      <option value="Africa/Bissau">Bissau</option>
+      <option value="America/Anguilla">Anguilla</option>
+      <option value="Australia/Sydney">Sydney 🇦🇺</option>
+      <option value="Asia/Tokyo">Tokyo 🇹🇰</option>
+      <option value="Europe/Paris">Paris 🇵🇾</option>
+      <option value="Europe/London">London 🇬🇧</option>
+      <option value="Europe/Rome">Rome 🇮🇹</option>
+      <option value="America/Jamaica">Jamaica 🇺🇸</option>
+      <option value="Africa/Lagos">Lagos 🇳🇬</option>
       </select>
+      <div class="cities">
       <div class="city" id="los-angeles">
         <div>
-        <h2>America/Los_Angeles 🇺🇸</h2>
+        <h2>Los_Angeles 🇺🇸</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
@@ -33,7 +35,7 @@
 
           <div class="city" id="lagos">
         <div>
-        <h2>Africa/Lagos 🇳🇬</h2>
+        <h2>Lagos 🇳🇬</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
@@ -41,7 +43,7 @@
 
          <div class="city" id="victoria">
         <div>
-        <h2>Australia/Victoria 🇦🇺</h2>
+        <h2>Victoria 🇦🇺</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
@@ -49,7 +51,7 @@
 
       <div class="city" id="barnaul">
         <div>
-        <h2>Asia/Barnaul 🇹🇰</h2>
+        <h2>Barnaul 🇹🇰</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
@@ -57,7 +59,7 @@
      
          <div class="city" id="berlin">
         <div>
-           <h2>Europe/Berlin 🇩🇪</h2>
+           <h2>Berlin 🇩🇪</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
@@ -65,7 +67,7 @@
       
       <div class="city" id="reunion">
         <div>
-        <h2>Indian/Reunion 🇮🇩</h2>
+        <h2>Reunion 🇮🇩</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
@@ -73,22 +75,14 @@
 
       <div class="city" id="majuro">
         <div>
-        <h2>Pacific/Majuro 🇵🇼</h2>
+        <h2>Majuro 🇵🇼</h2>
         <div class="date"></div>
         </div>
         <div class="time"></div>
       </div>
 
-
-      <div class="city" id="hawaii">
-        <div>
-        <h2>US/Hawaii 🇺🇸</h2>
-        <div class="date"></div>
-        </div>
-        <div class="time"></div>
+    
       </div>
-
-
     </div>
     <footer>
       Coded 👩🏽‍💻 by <strong>Akhigbe Faith Omoighe</strong>

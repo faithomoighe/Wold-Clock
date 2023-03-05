@@ -7,7 +7,7 @@ function updateTime(){
 
   losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
   losAngelesTimeElement.innerHTML = losAngelesTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 
   //Lagos
@@ -18,7 +18,7 @@ function updateTime(){
 
   lagosDateElement.innerHTML = lagosTime.format("MMMM Do YYYY");
   lagosTimeElement.innerHTML = lagosTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 
   //Victoria
@@ -29,7 +29,7 @@ function updateTime(){
 
   victoriaDateElement.innerHTML = victoriaTime.format("MMMM Do YYYY");
   victoriaTimeElement.innerHTML = victoriaTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 
   //Barnaul
@@ -40,7 +40,7 @@ function updateTime(){
 
   barnaulDateElement.innerHTML = barnaulTime.format("MMMM Do YYYY");
   barnaulTimeElement.innerHTML = barnaulTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 
   //Berlin
@@ -62,7 +62,7 @@ function updateTime(){
 
   reunionDateElement.innerHTML = reunionTime.format("MMMM Do YYYY");
   reunionTimeElement.innerHTML = reunionTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 
   //Majuro
@@ -73,10 +73,10 @@ function updateTime(){
 
   majuroDateElement.innerHTML = majuroTime.format("MMMM Do YYYY");
   majuroTimeElement.innerHTML = majuroTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 
-  //Majuro
+  //hawaii
   let hawaiiElement = document.querySelector("#hawaii");
   let hawaiiDateElement = hawaiiElement.querySelector(".date");
   let hawaiiTimeElement = hawaiiElement.querySelector(".time");
@@ -84,18 +84,29 @@ function updateTime(){
 
   hawaiiDateElement.innerHTML = hawaiiTime.format("MMMM Do YYYY");
   hawaiiTimeElement.innerHTML = hawaiiTime.format(
-    "h:mm:ss:SS[<small>]A[</small]"
+    "h:mm:ss:SS[<small>]A[</small>]"
   );
 }
-
-
-
-
-
-
-
-
-
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityTime = moment().tz(cityTimeZone);
+  citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+       <div class="city">
+        <div>
+        <h2>${cityTimeZone}</h2>
+        <div class="date">${cityTime.format("MMMM dddd Do YYYY")}</div>
+        </div>
+        <div class="time">${cityTime.format("h:mm:ss:SS")}
+        <small>${cityTime.format("A")}</small></div>
+      </div>
+     `;
+}
 updateTime();
 setInterval(updateTime, 100);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);
+
+
 
